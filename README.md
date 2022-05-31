@@ -1,4 +1,4 @@
-# Trashobs
+# trashobs
 
 # Dataset
 Envobsは以下のサイトからデータをダウンロードして利用しています。
