@@ -22,46 +22,46 @@ data.fillna(0,inplace=True)
 
 sp.run(["rm", "131105_recyclable_waste.csv"], capture_output=True)
 
-class meguro_resc:
-    def main(self, column):
-        
-        t=data['分別回収_拠点数']
-        print(t)
-        n = len(data[:])
 
-        y_t = data['分別回収_{}（ｔ）'.format(column)][0:n]
-        y_en = data['分別回収_売却益_{}（円）'.format(column)][0:n]
+def main(self, column):
+    
+    t=data['分別回収_拠点数']
+    print(t)
+    n = len(data[:])
 
-        x=np.arange(0,n)+2011
-        y1 = np.array([])
-        for i in y_t:
-            try:
-                y1 = np.append(y1, int(i.replace(',', '')))
-            except AttributeError:
-                y1 = np.append(y1, int(i))
+    y_t = data['分別回収_{}（ｔ）'.format(column)][0:n]
+    y_en = data['分別回収_売却益_{}（円）'.format(column)][0:n]
 
-
-        y2 = np.array([])
-        for i in y_en:
-            try:
-                y2 = np.append(y2, int(i.replace(',', ''))/1000)
-            except AttributeError:
-                y2 = np.append(y2, int(i)/1000)
-
-        fig = plt.figure(figsize=(11, 6))
-        ax1 = fig.add_subplot(1, 1, 1)
-        ax1.plot(x, y1, label="t", marker='*', color='r')
-        ax2 = ax1.twinx()
-        ax3 = ax2.plot(x, y2, label="1000yen", marker='*', color='b')
-        h1, l1 = ax1.get_legend_handles_labels()
-        h2, l2 = ax2.get_legend_handles_labels()
-        ax1.legend(h1 + h2, l1 + l2, loc="upper left")
-        ax1.set_ylabel("t", fontsize=12)
-        ax2.set_ylabel("1000円", fontsize=12)
-        ax1.set_title('{}'.format(column))
-        plt.savefig(column+".png")
-        plt.show()
+    x=np.arange(0,n)+2011
+    y1 = np.array([])
+    for i in y_t:
+        try:
+            y1 = np.append(y1, int(i.replace(',', '')))
+        except AttributeError:
+            y1 = np.append(y1, int(i))
 
 
-to = meguro_resc()
-to.main(column=args.resource)
+    y2 = np.array([])
+    for i in y_en:
+        try:
+            y2 = np.append(y2, int(i.replace(',', ''))/1000)
+        except AttributeError:
+            y2 = np.append(y2, int(i)/1000)
+
+    fig = plt.figure(figsize=(11, 6))
+    ax1 = fig.add_subplot(1, 1, 1)
+    ax1.plot(x, y1, label="t", marker='*', color='r')
+    ax2 = ax1.twinx()
+    ax3 = ax2.plot(x, y2, label="1000yen", marker='*', color='b')
+    h1, l1 = ax1.get_legend_handles_labels()
+    h2, l2 = ax2.get_legend_handles_labels()
+    ax1.legend(h1 + h2, l1 + l2, loc="upper left")
+    ax1.set_ylabel("t", fontsize=12)
+    ax2.set_ylabel("1000円", fontsize=12)
+    ax1.set_title('{}'.format(column))
+    plt.savefig(column+".png")
+    plt.show()
+
+
+if __name__=="__main__":
+    main(column=args.resource)
