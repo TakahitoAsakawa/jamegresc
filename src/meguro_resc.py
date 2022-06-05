@@ -19,7 +19,7 @@ data=pd.read_csv("131105_recyclable_waste.csv", encoding="shift-jis")
 data = data.rename(columns={'分別回収_ﾌﾟﾗｽﾁｯｸ製容器包装（ｔ）': '分別回収_プラスチック製容器包装（ｔ）', '分別回収_売薬駅_ﾌﾟﾗｽﾁｯｸ製容器包装（円）': '分別回収_売却益_プラスチック製容器包装（円）'})
 data = data.iloc[:, :14]
 data.fillna(0,inplace=True)
-print(data)
+
 sp.run(["rm", "131105_recyclable_waste.csv"], capture_output=True)
 
 class meguro_resc:
