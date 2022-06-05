@@ -25,7 +25,7 @@ https://catalog.data.metro.tokyo.lg.jp/dataset/t131105d0000000018/resource/31bb1
 ```zsh
 python meguro_resc.py
 ```
-![びん](/びん.png)
+![びん](/img/びん.png)
 
 
 
