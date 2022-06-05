@@ -22,7 +22,10 @@ https://catalog.data.metro.tokyo.lg.jp/dataset/t131105d0000000018/resource/31bb1
 クリエイティブ・コモンズ・ライセンス 表示4.0国際（ https://creativecommons.org/licenses/by/4.0/deed.ja ）
 
 # 実行例
-
+```zsh
+python meguro_resc.py
+```
+![びん](/びん.png)
 
 
 
