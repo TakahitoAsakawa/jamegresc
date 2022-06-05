@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import japanize_matplotlib
+import sys
 import argparse
 from time import sleep
 import subprocess as sp
@@ -23,7 +24,7 @@ data.fillna(0,inplace=True)
 sp.run(["rm", "131105_recyclable_waste.csv"], capture_output=True)
 
 
-def main(column="びん"):
+def main(column):
     
     t=data['分別回収_拠点数']
     print(t)
@@ -63,4 +64,6 @@ def main(column="びん"):
     plt.show()
 
 if __name__=="__main__":
+    if sys.argv:
+        del sys.argv[1:]
     main(column=args.resource)
