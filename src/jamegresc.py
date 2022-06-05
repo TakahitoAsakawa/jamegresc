@@ -62,5 +62,5 @@ def main(column):
     plt.savefig(column+".png")
     plt.show()
 
-
-main(column=args.resource)
+if __name__=="__main__":
+    main(column=args.resource)
