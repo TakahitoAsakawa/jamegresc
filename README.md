@@ -11,7 +11,7 @@ meguro_rescは、以下の著作物を改変・加工して利用しています
 
 著作物のタイトル　資源回収量・収集拠点数・売却益、\
 著作権者　東京都・目黒区、\
-クリエイティブ・コモンズ・ライセンス 表示4.0国際（https://creativecommons.org/licenses/by/4.0/deed.ja）
+クリエイティブ・コモンズ・ライセンス 表示4.0国際（ https://creativecommons.org/licenses/by/4.0/deed.ja ）
 
 
 
