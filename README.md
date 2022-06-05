@@ -1,4 +1,4 @@
-# meguro_resc
+# meguro-resc
 目黒区の年度別の資源ごみ回収量・売却益の可視化をしています。
 範囲は2011~2019年の間です。
 y軸は左が回収量(t)、右が売却益(1000円)です。
@@ -8,8 +8,8 @@ The range is between 2011~2019.
 The y-axis is the amount collected (tons) on the left and the profit from sale (1000 yen) on the right.
 
 # Dataset
-・meguro_rescは以下のページからデータをダウンロードして利用しています。\
-・meguro_resc uses the data downloaded from the following page.
+・meguro-rescは以下のページからデータをダウンロードして利用しています。\
+・meguro-resc uses the data downloaded from the following page.
 
 https://catalog.data.metro.tokyo.lg.jp/dataset/t131105d0000000018/resource/31bb126f-6f10-433a-9f65-d00986c48385
 
