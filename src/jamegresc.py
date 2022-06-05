@@ -23,7 +23,7 @@ data.fillna(0,inplace=True)
 sp.run(["rm", "131105_recyclable_waste.csv"], capture_output=True)
 
 
-def main(column):
+def main(column="びん"):
     
     t=data['分別回収_拠点数']
     print(t)
