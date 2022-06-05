@@ -7,6 +7,7 @@ y軸は左が回収量(t)、右が売却益(1000円)です。
 meguro_rescは以下のページからデータをダウンロードして利用しています。
 https://catalog.data.metro.tokyo.lg.jp/dataset/t131105d0000000018/resource/31bb126f-6f10-433a-9f65-d00986c48385
 
+
 meguro_rescは、以下の著作物を改変・加工して利用しています。
 
 著作物のタイトル　資源回収量・収集拠点数・売却益、\
