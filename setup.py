@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="jamegresc", # 名前
-    version="0.1.2", # バージョン設定
+    version="0.1.3", # バージョン設定
     author="takahito asakawa", # 名前
     author_email="s2022051@gmail.com", # メ-ルアドレス
     description='A package for visualization of Resource recovery amount and gain on sale data in Meguro', # 説明文書書き換え

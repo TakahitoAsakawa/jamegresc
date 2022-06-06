@@ -9,7 +9,7 @@ import subprocess as sp
 
 
 parser = argparse.ArgumentParser(prog='jamegresc', description="default：びん")
-parser.add_argument("resource", default="びん", 
+parser.add_argument("--resource", "-r", default="びん", 
     choices=["びん", "アルミ缶", "スチール缶", "ペットボトル", "古紙", "プラスチック製容器包装"])
 args = parser.parse_args()
 
