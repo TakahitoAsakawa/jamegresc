@@ -61,4 +61,3 @@ def main():
     ax1.set_title('{}'.format(column))
     plt.savefig(column+".png")
     
-main()
