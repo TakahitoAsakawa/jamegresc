@@ -62,7 +62,7 @@ def main(column):
     ax2.set_ylabel("1000円", fontsize=12)
     ax1.set_title('{}'.format(column))
     plt.savefig(column+".png")
-    plt.show()
+    
 
 
 main(column=args.resource)
