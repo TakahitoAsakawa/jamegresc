@@ -8,9 +8,8 @@ from time import sleep
 import subprocess as sp
 
 
-
 parser = argparse.ArgumentParser(prog='jamegresc', description="default：びん")
-parser.add_argument('-r', '--resource', default="びん", 
+parser.add_argument("resource", default="びん", 
     choices=["びん", "アルミ缶", "スチール缶", "ペットボトル", "古紙", "プラスチック製容器包装"])
 args = parser.parse_args()
 
@@ -18,10 +17,12 @@ sleep(20)
 sp.run(["wget", "https://data.bodik.jp/dataset/28417a5e-ec57-4676-9dbf-8c116fba12ce/resource/966c2391-0d93-45ef-b908-e200ac365a9f/download/131105_recyclable_waste.csv"], capture_output=True, text=True, encoding='utf-8').returncode
 data=pd.read_csv("131105_recyclable_waste.csv", encoding="shift-jis")
 data = data.rename(columns={'分別回収_ﾌﾟﾗｽﾁｯｸ製容器包装（ｔ）': '分別回収_プラスチック製容器包装（ｔ）', '分別回収_売薬駅_ﾌﾟﾗｽﾁｯｸ製容器包装（円）': '分別回収_売却益_プラスチック製容器包装（円）'})
-data = data.iloc[:, :15]
+data = data.iloc[:, :14]
 data.fillna(0,inplace=True)
 
 sp.run(["rm", "131105_recyclable_waste.csv"], capture_output=True)
+
+
 
 
 def main(column):
@@ -63,7 +64,5 @@ def main(column):
     plt.savefig(column+".png")
     plt.show()
 
-if __name__=="__main__":
-    if sys.argv:
-        del sys.argv[1:]
-    main(column=args.resource)
+
+main(column=args.resource)
