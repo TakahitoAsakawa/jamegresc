@@ -23,7 +23,11 @@ https://catalog.data.metro.tokyo.lg.jp/dataset/t131105d0000000018/resource/31bb1
 
 # 実行例
 ```zsh
-python meguro_resc.py
+jamegresc -h
+```
+
+```zsh
+jamegresc
 ```
 ![びん](/img/びん.png)
 

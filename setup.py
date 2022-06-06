@@ -23,7 +23,7 @@ setuptools.setup(
     package_dir={"": "src"},
     py_modules=['jamegresc'], # 設定するモジュール名
     packages=setuptools.find_packages(where="src"),
-    python_requires=">=3.7",
+    python_requires=">=3.7.7",
     entry_points = {
         'console_scripts': [
             'jamegresc = jamegresc:main' # src
